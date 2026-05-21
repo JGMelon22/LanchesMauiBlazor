@@ -1,4 +1,5 @@
 <Solution>
     <Project Path="LanchesLibrary/LanchesLibrary.csproj" />
     <Project Path="LanchesMauiBlazor/LanchesMauiBlazor.csproj" />
+    <Project Path="LanchesWeb/LanchesWeb.csproj" />
 </Solution>

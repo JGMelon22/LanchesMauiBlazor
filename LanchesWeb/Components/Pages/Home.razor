@@ -1,0 +1,23 @@
+﻿@page "/"
+@inject IJSRuntime js
+
+<PageTitle>Home</PageTitle>
+
+<ListaLanches ExibirAlertar="ExibirAlerta"></ListaLanches>
+
+
+@code
+{
+    private async Task ExibirAlerta()
+    {
+        try
+        {
+            await js.InvokeVoidAsync("alert", "Alerta da aplicação Web usando JavaScript");
+        }
+        catch (JSException ex)
+        {
+            var error = ex.Source;
+            Console.WriteLine($"Erro de JavaScript em Home.razor ...: {error}");
+        }
+    }
+}
